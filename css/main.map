@@ -13,7 +13,8 @@
 		"../scss/theme/_elements.scss",
 		"../scss/theme/_header.scss",
 		"../scss/theme/_home.scss",
-		"../scss/theme/_footer.scss"
+		"../scss/theme/_footer.scss",
+
 	],
 	"sourcesContent": [
 		"\n@import \"bootstrap/functions\";\n@import \"bootstrap/variables\";\n\n//\n// Grid mixins\n//\n\n@import \"bootstrap/mixins/breakpoints\";\n\n\n// including variables and mixins\n@import \"theme/variables\";\n@import \"theme/mixins\";\n@import \"theme/flexbox\";\n@import \"theme/reset\";\n\n\n// Custom Scss \n@import \"theme/elements\";\n@import \"theme/header\";\n@import \"theme/home\";\n@import \"theme/footer\";\n",
