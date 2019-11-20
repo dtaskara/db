@@ -1,8 +1,12 @@
 <?php
 
 	include '../../database/connection.php';
-	$query=sqlsrv_query($conn,"SELECT * FROM Hotel;");
+	// $query=sqlsrv_query($conn,"SELECT * FROM Hotel;");
 	$res=array();
+
+
+$query = sqlsrv_query($conn, "SELECT * FROM Hotel;", $res, array( "Scrollable" => 'static' ));
+
 
 echo "string";
 echo sqlsrv_num_rows($query);
