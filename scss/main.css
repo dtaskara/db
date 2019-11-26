@@ -2,3 +2,11 @@
 #myTab{
 	margin-top: 100px;
 }
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+
+	background-color: #f8b600;
+}
+
+.tabs .nav-pills .nav-link {
+	color: white;
+}
