@@ -1,3 +1,5 @@
+	
+
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -63,7 +65,7 @@
 				          
 				       	<!-- <li><a href="about.html">About</a></li> -->
 				          <li><a href="packages.html">Packages</a></li>
-				          <li><a href="hotels.html">Hotels</a></li>
+				          <li><a href="hotels.php">Hotels</a></li>
 				          <!-- <li><a href="insurance.html">Insurence</a></li> -->
 				          <!-- <li class="menu-has-children"><a href="">Blog</a>
 				            <ul>
@@ -105,6 +107,9 @@
 			</section>
 			<!-- End banner Area -->	
 
+			<div id="list"></div>
+
+
 			<!-- Start destinations Area -->
 			<section class="destinations-area section-gap">
 				<div class="container">
@@ -115,61 +120,116 @@
 		                        <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day to.</p>
 		                    </div>
 		                </div>
-		            </div>						
+		            </div>		
+
+
+
 					<div class="row">
+
+
+<?php 
+
+include 'database/connection.php';
+	// $query=sqlsrv_query($conn,"SELECT * FROM Hotel;");
+	$res=array();
+
+
+$query = sqlsrv_query($conn, "SELECT * FROM Hotel;", $res, array( "Scrollable" => 'static' ));
+
+	if(sqlsrv_num_rows($query)>0){
+		while ( $row=sqlsrv_fetch_object( $query )) {		
+
+ ?>
+
 						<div class="col-lg-4">
 							<div class="single-destinations">
 								<div class="thumb">
-									<img src="img/hotels/d1.jpg" alt="">
+									<img src="<?php echo $row->photo ?>" alt="">
 								</div>
 								<div class="details">
 									<h4 class="d-flex justify-content-between">
-										<span>Hilton Star Hotel</span>                              	
+										<span><?php echo $row->h_name  ?></span>                 
+
+
+
 										<div class="star">
+
+
+
+<?php 
+	for ($i=0; $i < 5 ; $i++) { 
+		if($row->H_stars<=$i){
+	?>
+<span class="fa fa-star "></span>
+	<?php		
+		}
+
+else{
+ 
+	?>
+<span class="fa fa-star checked"></span>		
+
+	<?php
+}
+
+	}
+ ?>
+
+
+											<!-- <span class="fa fa-star checked"></span>
 											<span class="fa fa-star checked"></span>
 											<span class="fa fa-star checked"></span>
 											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star"></span>				
+											<span class="fa fa-star"></span>	 -->			
 										</div>	
 									</h4>
-									<p>
+									<!-- <p>
 										View on map   |   49 Reviews
-									</p>
+									</p> -->
 									<ul class="package-list">
 										<li class="d-flex justify-content-between align-items-center">
 											<span>Swimming pool</span>
-											<span>Yes</span>
+											<span><?php echo $row->pool? 'Yes' : 'No' ?></span>
 										</li>
 										<li class="d-flex justify-content-between align-items-center">
 											<span>Gymnesium</span>
-											<span>No</span>
+											<span><?php echo $row->gym? 'Yes' : 'No' ?></span>
 										</li>
 										<li class="d-flex justify-content-between align-items-center">
 											<span>Wi-fi</span>
-											<span>Yes</span>
+											<span><?php echo $row->wifi? 'Yes' : 'No' ?></span>
 										</li>
 										<li class="d-flex justify-content-between align-items-center">
 											<span>Room Service</span>
-											<span>No</span>
+											<span><?php echo $row->roomService? 'Yes' : 'No' ?></span>
 										</li>
 										<li class="d-flex justify-content-between align-items-center">
 											<span>Air Condition</span>
-											<span>Yes</span>
+											<span><?php echo $row->airCondition? 'Yes' : 'No' ?></span>
 										</li>
 										<li class="d-flex justify-content-between align-items-center">
 											<span>Restaurant</span>
-											<span>Yes</span>
+											<span><?php echo $row->restaurant? 'Yes' : 'No' ?></span>
 										</li>												
 										<li class="d-flex justify-content-between align-items-center">
 											<span>Price per night</span>
-											<a href="#" class="price-btn">$250</a>
+											<a href="#" class="price-btn">$<?php echo $row->h_price ?></a>
 										</li>													
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
+
+
+
+<?php 
+
+
+}
+	}
+ ?>
+
+						<!-- <div class="col-lg-4">
 							<div class="single-destinations">
 								<div class="thumb">
 									<img src="img/hotels/d2.jpg" alt="">
@@ -428,7 +488,7 @@
 									</ul>
 								</div>
 							</div>
-						</div>																														
+						</div> -->																														
 					</div>
 				</div>	
 			</section>
@@ -557,5 +617,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			<script src="js/owl.carousel.min.js"></script>							
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>	
+			<!-- <script src="js/functions/list.js"></script>	 -->
 		</body>
 	</html>

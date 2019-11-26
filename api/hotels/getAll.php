@@ -7,10 +7,6 @@
 
 $query = sqlsrv_query($conn, "SELECT * FROM Hotel;", $res, array( "Scrollable" => 'static' ));
 
-
-echo "string";
-echo sqlsrv_num_rows($query);
-echo "string";
 	if(sqlsrv_num_rows($query)>0){
 		while ( $row=sqlsrv_fetch_object( $query )) {
 			$res[]=array(
