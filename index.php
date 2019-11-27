@@ -46,7 +46,7 @@
 
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
 
                     <!-- <li><a href="about.html">About</a></li> -->
                     <li><a href="packages.html">Packages</a></li>
@@ -85,21 +85,30 @@
                 <h6 class="text-white">Away from monotonous life</h6>
                 <h1 class="text-white">Magical Travel</h1>
                 <p class="text-white">
-                    If you are looking at blank cassettes on the web, you may be very confused at the difference in price. You may see some for as low as $.17 each.
+                    If you are looking at blank cassettes on the web, you may be very confused at the difference in
+                    price. You may see some for as low as $.17 each.
                 </p>
                 <a href="#" class="primary-btn text-uppercase">Get Started</a>
             </div>
 
-
+            <?php
+            $from = $to = "";
+            $date  = any;
+            $days = 0;
+            $person = 0;
+            ?>
 
             <section class="ftco-section justify-content-end ftco-search">
                 <div class="container-wrap ml-auto">
                     <div class="row no-gutters">
                         <div class="col-md-12 nav-link-wrap">
-                            <div class="nav nav-pills justify-content-center text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Flight</a>
+                            <div class="nav nav-pills justify-content-center text-center" id="v-pills-tab"
+                                 role="tablist" aria-orientation="vertical">
+                                <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
+                                   role="tab" aria-controls="v-pills-1" aria-selected="true">Flight</a>
 
-                                <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Hotel</a>
+                                <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab"
+                                   aria-controls="v-pills-2" aria-selected="false">Hotel</a>
 
                                 <!-- <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Car Rent</a> -->
                             </div>
@@ -108,10 +117,10 @@
 
                             <div class="tab-content p-4 px-5" id="v-pills-tabContent">
 
-                                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-nextgen-tab">
+                                <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel"
+                                     aria-labelledby="v-pills-nextgen-tab">
                                     <form action="#" class="search-destination">
                                         <div class="row">
-
 
 
                                             <!--               			<div class="col-md align-items-end">
@@ -129,10 +138,11 @@
                                                     <label for="#">from</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-                                                            <select name="" id="" class="form-control">
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
+                                                            <select name="" id="" class="form-control" >
                                                                 <option value="">1</option>
-                                                                <option value="">2</option>
+                                                                <option value="K">2</option>
                                                                 <option value="">3</option>
                                                                 <option value="">4</option>
                                                                 <option value="">5</option>
@@ -159,7 +169,8 @@
                                                     <label for="#">To</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
                                                             <select name="" id="" class="form-control">
                                                                 <option value="">1</option>
                                                                 <option value="">2</option>
@@ -188,7 +199,8 @@
                                                     <label for="#">Date</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
                                                             <select name="" id="" class="form-control">
                                                                 <option value="">1</option>
                                                                 <option value="">2</option>
@@ -216,7 +228,8 @@
                                                     <label for="#">Days</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
                                                             <select name="" id="" class="form-control">
                                                                 <option value="">1</option>
                                                                 <option value="">2</option>
@@ -235,7 +248,8 @@
                                                     <label for="#">Person</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
                                                             <select name="" id="" class="form-control">
                                                                 <option value="">1</option>
                                                                 <option value="">2</option>
@@ -250,7 +264,7 @@
                                             <div class="col-md align-self-end">
                                                 <div class="form-group">
                                                     <div class="form-field">
-                                                        <a href="#" class="primary-btn text-uppercase">Search</a>
+                                                        <a href="packages.html" class="primary-btn text-uppercase">Search</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -258,7 +272,8 @@
                                     </form>
                                 </div>
 
-                                <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-performance-tab">
+                                <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
+                                     aria-labelledby="v-pills-performance-tab">
                                     <form action="#" class="search-destination">
                                         <div class="row">
                                             <!-- <div class="col-md align-items-end">
@@ -277,7 +292,8 @@
                                                     <label for="#">Travelers</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
                                                             <select name="" id="" class="form-control">
                                                                 <option value="">1</option>
                                                                 <option value="">2</option>
@@ -307,7 +323,8 @@
                                                     <label for="#">Travelers</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
                                                             <select name="" id="" class="form-control">
                                                                 <option value="">1</option>
                                                                 <option value="">2</option>
@@ -326,7 +343,8 @@
                                                     <label for="#">Guest</label>
                                                     <div class="form-field">
                                                         <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
+                                                            </div>
                                                             <select name="" id="" class="form-control">
                                                                 <option value="">1</option>
                                                                 <option value="">2</option>
@@ -351,7 +369,8 @@
                                     </form>
                                 </div>
 
-                                <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-effect-tab">
+                                <div class="tab-pane fade" id="v-pills-3" role="tabpanel"
+                                     aria-labelledby="v-pills-effect-tab">
                                     <form action="#" class="search-destination">
                                         <div class="row">
                                             <div class="col-md align-items-end">
@@ -368,7 +387,8 @@
                                                     <label for="#">Check In</label>
                                                     <div class="form-field">
                                                         <div class="icon"><span class="icon-map-marker"></span></div>
-                                                        <input type="text" class="form-control checkin_date" placeholder="Check In">
+                                                        <input type="text" class="form-control checkin_date"
+                                                               placeholder="Check In">
                                                     </div>
                                                 </div>
                                             </div>
@@ -377,7 +397,8 @@
                                                     <label for="#">Check Out</label>
                                                     <div class="form-field">
                                                         <div class="icon"><span class="icon-map-marker"></span></div>
-                                                        <input type="text" class="form-control checkout_date" placeholder="From">
+                                                        <input type="text" class="form-control checkout_date"
+                                                               placeholder="From">
                                                     </div>
                                                 </div>
                                             </div>
@@ -459,7 +480,8 @@
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
                     <h1 class="mb-10">Popular Destinations</h1>
-                    <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, day.</p>
+                    <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast,
+                        day.</p>
                 </div>
             </div>
         </div>
@@ -516,7 +538,8 @@
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
                     <h1 class="mb-10">We Provide Affordable Prices</h1>
-                    <p>Well educated, intellectual people, especially scientists at all times demonstrate considerably.</p>
+                    <p>Well educated, intellectual people, especially scientists at all times demonstrate
+                        considerably.</p>
                 </div>
             </div>
         </div>
@@ -697,7 +720,8 @@
             <div class="menu-content pb-70 col-lg-8">
                 <div class="title text-center">
                     <h1 class="mb-10">Testimonial from our Clients</h1>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
+                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall
+                        from </p>
                 </div>
             </div>
         </div>
@@ -709,7 +733,8 @@
                     </div>
                     <div class="desc">
                         <p>
-                            Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
+                            Do you want to be even more successful? Learn to love learning and growth. The more effort
+                            you put into improving your skills, the bigger the payoff you.
                         </p>
                         <h4>Harriet Maxwell</h4>
                         <div class="star">
@@ -727,7 +752,8 @@
                     </div>
                     <div class="desc">
                         <p>
-                            A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
+                            A purpose is the eternal condition for success. Every former smoker can tell you just how
+                            hard it is to stop smoking cigarettes. However.
                         </p>
                         <h4>Carolyn Craig</h4>
                         <div class="star">
@@ -745,7 +771,8 @@
                     </div>
                     <div class="desc">
                         <p>
-                            Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
+                            Do you want to be even more successful? Learn to love learning and growth. The more effort
+                            you put into improving your skills, the bigger the payoff you.
                         </p>
                         <h4>Harriet Maxwell</h4>
                         <div class="star">
@@ -763,7 +790,8 @@
                     </div>
                     <div class="desc">
                         <p>
-                            A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
+                            A purpose is the eternal condition for success. Every former smoker can tell you just how
+                            hard it is to stop smoking cigarettes. However.
                         </p>
                         <h4>Carolyn Craig</h4>
                         <div class="star">
@@ -781,7 +809,8 @@
                     </div>
                     <div class="desc">
                         <p>
-                            Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
+                            Do you want to be even more successful? Learn to love learning and growth. The more effort
+                            you put into improving your skills, the bigger the payoff you.
                         </p>
                         <h4>Harriet Maxwell</h4>
                         <div class="star">
@@ -799,7 +828,8 @@
                     </div>
                     <div class="desc">
                         <p>
-                            A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
+                            A purpose is the eternal condition for success. Every former smoker can tell you just how
+                            hard it is to stop smoking cigarettes. However.
                         </p>
                         <h4>Carolyn Craig</h4>
                         <div class="star">
@@ -1001,7 +1031,9 @@
                 <div class="single-footer-widget">
                     <h6>About Agency</h6>
                     <p>
-                        The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point
+                        The world has become so fast paced that people don’t want to stand by reading a page of
+                        information, they would much rather look at a presentation and understand the message. It has
+                        come to a point
                     </p>
                 </div>
             </div>
@@ -1035,9 +1067,12 @@
                         For business professionals caught between high OEM price and mediocre print and graphic output.
                     </p>
                     <div id="mc_embed_signup">
-                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">
+                        <form target="_blank"
+                              action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                              method="get" class="subscription relative">
                             <div class="input-group d-flex flex-row">
-                                <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = 'Email Address '" required="" type="email">
                                 <button class="btn bb-btn"><span class="lnr lnr-location"></span></button>
                             </div>
                             <div class="mt-10 info"></div>
@@ -1063,8 +1098,11 @@
         </div>
 
         <div class="row footer-bottom d-flex justify-content-between align-items-center">
-            <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            <p class="col-lg-8 col-sm-12 footer-text m-0">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+                        href="https://colorlib.com" target="_blank">Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             <div class="col-lg-4 col-sm-12 footer-social">
                 <a href="#"><i class="fa fa-facebook"></i></a>
