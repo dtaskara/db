@@ -1,10 +1,12 @@
 <?php
 
-$s = null;
-if($_POST['search']){
-
+$search = null;
+$filter = false;
+if (isset($_GET['res'])) {
+    $search = json_decode($_GET['res']);
+    if ($search != [])
+        $filter = true;
 }
-
 
 
 ?>
@@ -207,18 +209,18 @@ if($_POST['search']){
 
                                 <div class="col-md align-items-end">
                                     <div class="form-group">
-                                        <label for="#">Search text</label>
-                                        <div class="form-field">
-                                            <div class="select-wrap">
-                                                <div class="icon"><span
-                                                            class="ion-ios-arrow-down"></span>
-                                                </div>
-                                                <input type="text"
-                                                       name="searchText"
-                                                       class="form-control">
+                                            <label for="#">Search text</label>
+                                            <div class="form-field">
+                                                <div class="select-wrap">
+                                                    <div class="icon"><span
+                                                                class="ion-ios-arrow-down"></span>
+                                                    </div>
+                                                    <input type="text"
+                                                           name="searchText"
+                                                           class="form-control">
 
+                                                </div>
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -347,7 +349,6 @@ if($_POST['search']){
                     </div>
 
 
-
                 </div>
             </div>
         </div>
@@ -372,27 +373,129 @@ if($_POST['search']){
 
 
             <?php
+            if (!$filter) {
+                include 'database/connection.php';
+                // $query=sqlsrv_query($conn,"SELECT * FROM Hotel;");
+                $res = array();
 
-            include 'database/connection.php';
-            // $query=sqlsrv_query($conn,"SELECT * FROM Hotel;");
-            $res = array();
+
+                $query = sqlsrv_query($conn, "SELECT * FROM Hotel;", $res, array("Scrollable" => 'static'));
+
+                if (sqlsrv_num_rows($query) > 0) {
+                    while ($row = sqlsrv_fetch_object($query)) {
+
+                        ?>
+
+                        <div class="col-lg-4">
+                            <div class="single-destinations">
+                                <div class="thumb">
+                                    <img src="<?php echo $row->photo ?>" alt="">
+                                </div>
+                                <div class="details">
+                                    <h4 class="d-flex justify-content-between">
+                                        <span><?php echo $row->h_name ?></span>
 
 
-            $query = sqlsrv_query($conn, "SELECT * FROM Hotel;", $res, array("Scrollable" => 'static'));
+                                        <div class="star">
 
-            if (sqlsrv_num_rows($query) > 0) {
-                while ($row = sqlsrv_fetch_object($query)) {
 
+                                            <?php
+                                            for ($i = 0; $i < 5; $i++) {
+                                                if ($row->H_stars <= $i) {
+                                                    ?>
+                                                    <span class="fa fa-star "></span>
+                                                    <?php
+                                                } else {
+
+                                                    ?>
+                                                    <span class="fa fa-star checked"></span>
+
+                                                    <?php
+                                                }
+
+                                            }
+
+                                            ?>
+
+
+                                            <!-- <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>	 -->
+                                        </div>
+                                    </h4>
+                                    <!-- <p>
+                                        View on map   |   49 Reviews
+                                    </p> -->
+                                    <ul class="package-list">
+                                        <!--                                        <li class="d-flex justify-content-between align-items-center">-->
+                                        <!--                                            <span>Swimming pool</span>-->
+                                        <!--                                            <span>-->
+                                        <?php //echo $row->pool ? 'Yes' : 'No' ?><!--</span>-->
+                                        <!--                                        </li>-->
+                                        <!--                                        <li class="d-flex justify-content-between align-items-center">-->
+                                        <!--                                            <span>Gymnesium</span>-->
+                                        <!--                                            <span>-->
+                                        <?php //echo $row->gym ? 'Yes' : 'No' ?><!--</span>-->
+                                        <!--                                        </li>-->
+                                        <!--                                        <li class="d-flex justify-content-between align-items-center">-->
+                                        <!--                                            <span>Wi-fi</span>-->
+                                        <!--                                            <span>-->
+                                        <?php //echo $row->wifi ? 'Yes' : 'No' ?><!--</span>-->
+                                        <!--                                        </li>-->
+                                        <!--                                        <li class="d-flex justify-content-between align-items-center">-->
+                                        <!--                                            <span>Room Service</span>-->
+                                        <!--                                            <span>-->
+                                        <?php //echo $row->roomService ? 'Yes' : 'No' ?><!--</span>-->
+                                        <!--                                        </li>-->
+                                        <!--                                        <li class="d-flex justify-content-between align-items-center">-->
+                                        <!--                                            <span>Air Condition</span>-->
+                                        <!--                                            <span>-->
+                                        <?php //echo $row->airCondition ? 'Yes' : 'No' ?><!--</span>-->
+                                        <!--                                        </li>-->
+                                        <!--                                        <li class="d-flex justify-content-between align-items-center">-->
+                                        <!--                                            <span>Restaurant</span>-->
+                                        <!--                                            <span>-->
+                                        <?php //echo $row->restaurant ? 'Yes' : 'No' ?><!--</span>-->
+                                        <!--                                        </li>-->
+                                        <!--                                        <li class="d-flex justify-content-between align-items-center">-->
+                                        <!--                                            <span>Price per night</span>-->
+                                        <!--                                            <a href="hotel.php?id=-->
+                                        <?php //echo $row->h_id ?><!--" class="price-btn">$-->
+                                        <?php //echo $row->h_price ?><!--</a>-->
+                                        <!--                                        </li>-->
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <span><?php echo $row->h_description ?></span>
+                                        </li>
+
+                                        <li class="d-flex justify-content-between align-items-center">
+                                            <span>Click to get more information</span>
+                                            <a href="hotel.php?id=<?php echo $row->h_id ?>" class="price-btn">Read</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <?php
+
+                    }
+                }
+            } else {
+                for ($x = 0; $x < count($search); $x++) {
                     ?>
+
 
                     <div class="col-lg-4">
                         <div class="single-destinations">
                             <div class="thumb">
-                                <img src="<?php echo $row->photo ?>" alt="">
+                                <img src="<?php echo $search[$x]->photo ?>" alt="">
                             </div>
                             <div class="details">
                                 <h4 class="d-flex justify-content-between">
-                                    <span><?php echo $row->h_name ?></span>
+                                    <span><?php echo $search[$x]->h_name ?></span>
 
 
                                     <div class="star">
@@ -400,7 +503,7 @@ if($_POST['search']){
 
                                         <?php
                                         for ($i = 0; $i < 5; $i++) {
-                                            if ($row->H_stars <= $i) {
+                                            if ($search[$x]->H_stars <= $i) {
                                                 ?>
                                                 <span class="fa fa-star "></span>
                                                 <?php
@@ -413,6 +516,7 @@ if($_POST['search']){
                                             }
 
                                         }
+
                                         ?>
 
 
@@ -427,43 +531,52 @@ if($_POST['search']){
                                     View on map   |   49 Reviews
                                 </p> -->
                                 <ul class="package-list">
+<!--                                    <li class="d-flex justify-content-between align-items-center">-->
+<!--                                        <span>Swimming pool</span>-->
+<!--                                        <span>--><?php //echo $search[$x]->pool ? 'Yes' : 'No' ?><!--</span>-->
+<!--                                    </li>-->
+<!--                                    <li class="d-flex justify-content-between align-items-center">-->
+<!--                                        <span>Gymnesium</span>-->
+<!--                                        <span>--><?php //echo $search[$x]->gym ? 'Yes' : 'No' ?><!--</span>-->
+<!--                                    </li>-->
+<!--                                    <li class="d-flex justify-content-between align-items-center">-->
+<!--                                        <span>Wi-fi</span>-->
+<!--                                        <span>--><?php //echo $search[$x]->wifi ? 'Yes' : 'No' ?><!--</span>-->
+<!--                                    </li>-->
+<!--                                    <li class="d-flex justify-content-between align-items-center">-->
+<!--                                        <span>Room Service</span>-->
+<!--                                        <span>--><?php //echo $search[$x]->roomService ? 'Yes' : 'No' ?><!--</span>-->
+<!--                                    </li>-->
+<!--                                    <li class="d-flex justify-content-between align-items-center">-->
+<!--                                        <span>Air Condition</span>-->
+<!--                                        <span>--><?php //echo $search[$x]->airCondition ? 'Yes' : 'No' ?><!--</span>-->
+<!--                                    </li>-->
+<!--                                    <li class="d-flex justify-content-between align-items-center">-->
+<!--                                        <span>Restaurant</span>-->
+<!--                                        <span>--><?php //echo $search[$x]->restaurant ? 'Yes' : 'No' ?><!--</span>-->
+<!--                                    </li>-->
+<!--                                    <li class="d-flex justify-content-between align-items-center">-->
+<!--                                        <span>Price per night</span>-->
+<!---->
+<!--                                        <a href="hotel.php?id=--><?php //echo $search[$x]->id ?><!--"-->
+<!--                                           class="price-btn">$--><?php //echo $search[$x]->h_price ?><!--</a>-->
+<!--                                    </li>-->
                                     <li class="d-flex justify-content-between align-items-center">
-                                        <span>Swimming pool</span>
-                                        <span><?php echo $row->pool ? 'Yes' : 'No' ?></span>
+                                        <span><?php echo  $search[$x]->h_description ?></span>
                                     </li>
+
                                     <li class="d-flex justify-content-between align-items-center">
-                                        <span>Gymnesium</span>
-                                        <span><?php echo $row->gym ? 'Yes' : 'No' ?></span>
+                                        <span>Click to get more information</span>
+                                        <a href="hotel.php?id=<?php echo  $search[$x]->id ?>" class="price-btn">Read</a>
                                     </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Wi-fi</span>
-                                        <span><?php echo $row->wifi ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Room Service</span>
-                                        <span><?php echo $row->roomService ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Air Condition</span>
-                                        <span><?php echo $row->airCondition ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Restaurant</span>
-                                        <span><?php echo $row->restaurant ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Price per night</span>
-                                        <a href="#" class="price-btn">$<?php echo $row->h_price ?></a>
-                                    </li>
+
+
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-
                     <?php
-
-
                 }
             }
             ?>
