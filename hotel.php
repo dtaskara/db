@@ -157,7 +157,7 @@ if (isset($_GET['id'])) {
                                 </div>
                                 <div class="modal-body">
 
-                                    <form action="">
+                                    <form action="api/hotels/update.php">
                                         <div>
                                             <div class="row">
                                                 <p>Name:</p>
@@ -199,87 +199,92 @@ if (isset($_GET['id'])) {
                                                 <input type="number"
                                                        name="contact"
                                                        class="form-control"
-                                                       value="<?php echo $res[0]['price'] ?>">
+                                                       value="<?php echo $res[0]['h_price'] ?>">
                                             </div>
 
                                             <div class="row">
                                                 <p>Photo:</p>
-<!--                                                <input type="text"-->
-<!--                                                       name="contact"-->
-<!--                                                       class="form-control"-->
-<!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+
+                                                <img src="<?php echo $res[0]['h_price'] ?>" alt="">
+                                                <input type="image" name="image" >
                                             </div>
 
 
                                             <div class="row">
                                                 <p>Stars:</p>
-<!--                                                <input type="text"-->
-<!--                                                       name="contact"-->
-<!--                                                       class="form-control"-->
-<!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+                                                <select name="star" class="form-control">
+                                                    <option value="" selected="<?php echo $res[0]['H_stars']=='' ? 'selected':''?>">-</option>
+                                                    <option value="1" selected="<?php echo $res[0]['H_stars']=='1' ? 'selected':''?>" >1</option>
+                                                    <option value="2" selected="<?php echo $res[0]['H_stars']=='2' ? 'selected':''?>">2</option>
+                                                    <option value="3" selected="<?php echo $res[0]['H_stars']=='3' ? 'selected':''?>">3</option>
+                                                    <option value="4" selected="<?php echo $res[0]['H_stars']=='4' ? 'selected':''?>">4</option>
+                                                    <option value="5" selected="<?php echo $res[0]['H_stars']=='5' ? 'selected':''?>">5</option>
+                                                </select>
                                             </div>
 
 
                                             <div class="row">
                                                 <p>Pool:</p>
-                                                <!--                                                <input type="text"-->
-                                                <!--                                                       name="contact"-->
-                                                <!--                                                       class="form-control"-->
-                                                <!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+
+                                                <div class="primary-checkbox">
+                                                    <input type="checkbox" id="default-checkbox" name="pool" checked="<?php echo $res[0]['pool'] ? 'true':'false' ?>">
+                                                    <label for="default-checkbox"></label>
+                                                </div>
+
                                             </div>
 
 
 
                                             <div class="row">
                                                 <p>Gym:</p>
-                                                <!--                                                <input type="text"-->
-                                                <!--                                                       name="contact"-->
-                                                <!--                                                       class="form-control"-->
-                                                <!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+                                                <div class="primary-checkbox">
+                                                    <input type="checkbox" id="default-checkbox" name="gym" checked="<?php echo $res[0]['gym'] ? 'true':'false' ?>">
+                                                    <label for="default-checkbox"></label>
+                                                </div>
                                             </div>
 
 
                                             <div class="row">
                                                 <p>Wifi:</p>
-                                                <!--                                                <input type="text"-->
-                                                <!--                                                       name="contact"-->
-                                                <!--                                                       class="form-control"-->
-                                                <!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+                                                <div class="primary-checkbox">
+                                                    <input type="checkbox" id="default-checkbox" name="wifi" checked="<?php echo $res[0]['wifi'] ? 'true':'false' ?>">
+                                                    <label for="default-checkbox"></label>
+                                                </div>
                                             </div>
 
 
                                             <div class="row">
                                                 <p>Room service:</p>
-                                                <!--                                                <input type="text"-->
-                                                <!--                                                       name="contact"-->
-                                                <!--                                                       class="form-control"-->
-                                                <!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+                                                <div class="primary-checkbox">
+                                                    <input type="checkbox" id="default-checkbox" name="roomService" checked="<?php echo $res[0]['roomService'] ? 'true':'false' ?>">
+                                                    <label for="default-checkbox"></label>
+                                                </div>
                                             </div>
 
 
 
                                             <div class="row">
                                                 <p>Air condition:</p>
-                                                <!--                                                <input type="text"-->
-                                                <!--                                                       name="contact"-->
-                                                <!--                                                       class="form-control"-->
-                                                <!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+                                                <div class="primary-checkbox">
+                                                    <input type="checkbox" id="default-checkbox" name="airCondition" checked="<?php echo $res[0]['airCondition'] ? 'true':'false' ?>">
+                                                    <label for="default-checkbox"></label>
+                                                </div>
                                             </div>
 
 
                                             <div class="row">
                                                 <p>Restaurant:</p>
-                                                <!--                                                <input type="text"-->
-                                                <!--                                                       name="contact"-->
-                                                <!--                                                       class="form-control"-->
-                                                <!--                                                       value="--><?php //echo $res[0]['contact'] ?><!--">-->
+                                                <div class="primary-checkbox">
+                                                    <input type="checkbox" id="default-checkbox" name="restaurant" checked="<?php echo $res[0]['restaurant'] ? 'true':'false' ?>">
+                                                    <label for="default-checkbox"></label>
+                                                </div>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Save</button>
+                                    <button type="submit" class="btn btn-default" data-dismiss="modal">Save</button>
                                 </div>
                             </div>
 

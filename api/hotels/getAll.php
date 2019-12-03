@@ -1,7 +1,6 @@
 <?php
 
 	include '../../database/connection.php';
-	// $query=sqlsrv_query($conn,"SELECT * FROM Hotel;");
 	$res=array();
 
 
