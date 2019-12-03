@@ -53,10 +53,10 @@
 					</div>
 				</div>
 				<div class="container main-menu">
-					<div class="row align-items-center  d-flex">
-				      <div id="logo">
-				        <a href="index.php"><img src="img/logo.png" alt="" title="" /></a>
-				      </div>
+					<div class="row align-items-center justify-content-center d-flex">
+<!--				      <div id="logo">-->
+<!--				        <a href="index.php"><img src="img/logo.png" alt="" title="" /></a>-->
+<!--				      </div>-->
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li><a href="index.php">Home</a></li>
