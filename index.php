@@ -51,6 +51,8 @@
                     <!-- <li><a href="about.html">About</a></li> -->
                     <li><a href="packages.php">Packages</a></li>
                     <li><a href="hotels.php">Hotels</a></li>
+                     <li><a href="tours.php">Tours</a></li>
+
                     <!-- <li><a href="insurance.html">Insurence</a></li> -->
                     <!-- <li class="menu-has-children"><a href="">Blog</a>
                       <ul>
@@ -91,12 +93,7 @@
                 <a href="#" class="primary-btn text-uppercase">Get Started</a>
             </div>
 
-            <?php
-            $from = $to = "";
-            $date  = any;
-            $days = 0;
-            $person = 0;
-            ?>
+            
 
             <section class="ftco-section justify-content-end ftco-search">
                 <div class="container-wrap ml-auto">

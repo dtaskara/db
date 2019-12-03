@@ -2,7 +2,7 @@
 // Dina : DESKTOP-DFCGBU5
 // Aknur: LAPTOP-8GC05N0A\SQLEXPRESS
 
-$servername = "DESKTOP-DFCGBU5";
+$servername = "LAPTOP-8GC05N0A\SQLEXPRESS";
 $connectionInfo = array("Database" => "Project");
 $conn = sqlsrv_connect($servername, $connectionInfo);
 

@@ -78,7 +78,7 @@
                     Hotels
                 </h1>
                 <p class="text-white link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
-                    <a href="hotels.php"> Hotels</a></p>
+                    <a href="hotels.php"> Tours</a></p>
             </div>
         </div>
     </div>
@@ -155,7 +155,7 @@
                                                     $res = array();
 
 
-                                                    $query = sqlsrv_query($conn, "SELECT * FROM Hotel;", $res, array("Scrollable" => 'static'));
+                                                    $query = sqlsrv_query($conn, "SELECT * FROM PackageTour;", $res, array("Scrollable" => 'static'));
 
                                                     if (sqlsrv_num_rows($query) > 0) {
                                                         while ($row = sqlsrv_fetch_object($query)) {
@@ -163,7 +163,7 @@
                                                             ?>
 
 
-                                                            <option value="<?php echo $row->h_name ?>"><?php echo $row->h_name ?></option>
+                                                            <option value="<?php echo $row->h_name ?>"><?php echo $row->name ?></option>
 
                                                             <?php
                                                         }
@@ -369,7 +369,7 @@
             $res = array();
 
 
-            $query = sqlsrv_query($conn, "SELECT * FROM Hotel;", $res, array("Scrollable" => 'static'));
+            $query = sqlsrv_query($conn, "SELECT * FROM PackageTour;", $res, array("Scrollable" => 'static'));
 
             if (sqlsrv_num_rows($query) > 0) {
                 while ($row = sqlsrv_fetch_object($query)) {
@@ -383,68 +383,18 @@
                             </div>
                             <div class="details">
                                 <h4 class="d-flex justify-content-between">
-                                    <span><?php echo $row->h_name ?></span>
+                                    <span><?php echo $row->name ?></span>
 
 
-                                    <div class="star">
-
-
-                                        <?php
-                                        for ($i = 0; $i < 5; $i++) {
-                                            if ($row->H_stars <= $i) {
-                                                ?>
-                                                <span class="fa fa-star "></span>
-                                                <?php
-                                            } else {
-
-                                                ?>
-                                                <span class="fa fa-star checked"></span>
-
-                                                <?php
-                                            }
-
-                                        }
-                                        ?>
-
-
-                                        <!-- <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star checked"></span>
-                                        <span class="fa fa-star"></span>	 -->
-                                    </div>
+                                
                                 </h4>
                                 <!-- <p>
                                     View on map   |   49 Reviews
                                 </p> -->
                                 <ul class="package-list">
                                     <li class="d-flex justify-content-between align-items-center">
-                                        <span>Swimming pool</span>
-                                        <span><?php echo $row->pool ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Gymnesium</span>
-                                        <span><?php echo $row->gym ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Wi-fi</span>
-                                        <span><?php echo $row->wifi ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Room Service</span>
-                                        <span><?php echo $row->roomService ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Air Condition</span>
-                                        <span><?php echo $row->airCondition ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Restaurant</span>
-                                        <span><?php echo $row->restaurant ? 'Yes' : 'No' ?></span>
-                                    </li>
-                                    <li class="d-flex justify-content-between align-items-center">
-                                        <span>Price per night</span>
-                                        <a href="#" class="price-btn">$<?php echo $row->h_price ?></a>
+                                        <span>Name</span>
+                                        <span><?php echo $row->description ? 'Yes' : 'No' ?></span>
                                     </li>
                                 </ul>
                             </div>
@@ -601,3 +551,4 @@
 <!-- <script src="js/functions/list.js"></script>	 -->
 </body>
 </html>
+
