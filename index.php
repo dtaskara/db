@@ -90,7 +90,7 @@
                     If you are looking at blank cassettes on the web, you may be very confused at the difference in
                     price. You may see some for as low as $.17 each.
                 </p>
-                <a href="#" class="primary-btn text-uppercase">Get Started</a>
+                <!-- <a href="#" class="primary-btn text-uppercase">Get Started</a> -->
             </div>
 
             
@@ -98,18 +98,7 @@
             <section class="ftco-section justify-content-end ftco-search">
                 <div class="container-wrap ml-auto">
                     <div class="row no-gutters">
-                        <div class="col-md-12 nav-link-wrap">
-                            <div class="nav nav-pills justify-content-center text-center" id="v-pills-tab"
-                                 role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1"
-                                   role="tab" aria-controls="v-pills-1" aria-selected="true">Flight</a>
-
-                                <a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab"
-                                   aria-controls="v-pills-2" aria-selected="false">Hotel</a>
-
-                                <!-- <a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Car Rent</a> -->
-                            </div>
-                        </div>
+                       
                         <div class="col-md-12 tab-wrap">
 
                             <div class="tab-content p-4 px-5" id="v-pills-tabContent">
@@ -130,238 +119,8 @@
                                                                           </div>
                                                                       </div> -->
 
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">from</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control" >
-                                                                <option value="">1</option>
-                                                                <option value="K">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                          
 
-
-                                            <!-- <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Where</label>
-                                                    <div class="form-field">
-                                                        <div class="icon"><span class="icon-map-marker"></span></div>
-                                                      <input type="text" class="form-control" placeholder="Where">
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
-
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">To</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <!-- <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Check In</label>
-                                                    <div class="form-field">
-                                                        <div class="icon"><span class="icon-map-marker"></span></div>
-                                                      <input type="text" class="form-control checkin_date" placeholder="Check In">
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Date</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Check Out</label>
-                                                    <div class="form-field">
-                                                        <div class="icon"><span class="icon-map-marker"></span></div>
-                                                      <input type="text" class="form-control checkout_date" placeholder="From">
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
-
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Days</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Person</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md align-self-end">
-                                                <div class="form-group">
-                                                    <div class="form-field">
-                                                        <a href="packages.php" class="primary-btn text-uppercase">Search</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-
-                                <div class="tab-pane fade" id="v-pills-2" role="tabpanel"
-                                     aria-labelledby="v-pills-performance-tab">
-                                    <form action="#" class="search-destination">
-                                        <div class="row">
-                                            <!-- <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Check In</label>
-                                                    <div class="form-field">
-                                                        <div class="icon"><span class="icon-map-marker"></span></div>
-                                                      <input type="text" class="form-control checkin_date" placeholder="Check In">
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
-
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Travelers</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <!-- <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Check Out</label>
-                                                    <div class="form-field">
-                                                        <div class="icon"><span class="icon-map-marker"></span></div>
-                                                      <input type="text" class="form-control checkout_date" placeholder="From">
-                                                    </div>
-                                                </div>
-                                            </div> -->
-
-
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Travelers</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-md align-items-end">
-                                                <div class="form-group">
-                                                    <label for="#">Guest</label>
-                                                    <div class="form-field">
-                                                        <div class="select-wrap">
-                                                            <div class="icon"><span class="ion-ios-arrow-down"></span>
-                                                            </div>
-                                                            <select name="" id="" class="form-control">
-                                                                <option value="">1</option>
-                                                                <option value="">2</option>
-                                                                <option value="">3</option>
-                                                                <option value="">4</option>
-                                                                <option value="">5</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md align-self-end">
-                                                <div class="form-group">
-                                                    <div class="form-field">
-                                                        <!--   <input type="submit" value="Search" class="form-control btn btn-primary"> -->
-                                                        <a href="#" class="primary-btn text-uppercase">Search</a>
-
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </form>
                                 </div>
@@ -483,7 +242,51 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-4">
+
+
+              <?php
+
+            include 'database/connection.php';
+            // $query=sqlsrv_query($conn,"SELECT * FROM Hotel;");
+            $res = array();
+
+// SELECT * FROM table 
+// group by `Group`
+// ORDER BY COUNT(Group)
+
+
+            $query = sqlsrv_query($conn, "SELECT *
+FROM PackageTour
+INNER JOIN Reservation ON Reservation.PT_id = PackageTour.PT_id
+
+group by Reservation.PT_id
+HAVING count(Reservation.PT_id) >0
+ORDER by count(Reservation.PT_id)
+;", $res, array("Scrollable" => 'static'));
+            if (sqlsrv_num_rows($query) > 0) {
+                while ($row = sqlsrv_fetch_object($query)) {
+
+                    ?>
+
+                    <div class="col-lg-4">
+                        <div class="single-destinations">
+                            <div class="thumb">
+                                <img src="<?php echo $row->photo ?>" alt="">
+
+                            </div>
+                           
+                        </div>
+                    </div>
+
+
+                    <?php
+
+
+                }
+            }
+            ?>
+
+            <!-- <div class="col-lg-4">
                 <div class="single-destination relative">
                     <div class="thumb relative">
                         <div class="overlay overlay-bg"></div>
@@ -523,121 +326,21 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
+
+
+
 </section>
 <!-- End popular-destination Area -->
 
 
-<!-- Start price Area -->
-<section class="price-area section-gap">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-70 col-lg-8">
-                <div class="title text-center">
-                    <h1 class="mb-10">We Provide Affordable Prices</h1>
-                    <p>Well educated, intellectual people, especially scientists at all times demonstrate
-                        considerably.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="single-price">
-                    <h4>Cheap Packages</h4>
-                    <ul class="price-list">
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>New York</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Maldives</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Sri Lanka</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Nepal</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Thiland</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Singapore</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-price">
-                    <h4>Luxury Packages</h4>
-                    <ul class="price-list">
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>New York</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Maldives</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Sri Lanka</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Nepal</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Thiland</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Singapore</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="single-price">
-                    <h4>Camping Packages</h4>
-                    <ul class="price-list">
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>New York</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Maldives</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Sri Lanka</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Nepal</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Thiland</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                        <li class="d-flex justify-content-between align-items-center">
-                            <span>Singapore</span>
-                            <a href="#" class="price-btn">$1500</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End price Area -->
+
+
+
+
+          
+
+
 
 
 <!-- Start other-issue Area -->
@@ -710,139 +413,6 @@
 <!-- End other-issue Area -->
 
 
-<!-- Start testimonial Area -->
-<section class="testimonial-area section-gap">
-    <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="menu-content pb-70 col-lg-8">
-                <div class="title text-center">
-                    <h1 class="mb-10">Testimonial from our Clients</h1>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall
-                        from </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="active-testimonial">
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user1.png" alt="">
-                    </div>
-                    <div class="desc">
-                        <p>
-                            Do you want to be even more successful? Learn to love learning and growth. The more effort
-                            you put into improving your skills, the bigger the payoff you.
-                        </p>
-                        <h4>Harriet Maxwell</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user2.png" alt="">
-                    </div>
-                    <div class="desc">
-                        <p>
-                            A purpose is the eternal condition for success. Every former smoker can tell you just how
-                            hard it is to stop smoking cigarettes. However.
-                        </p>
-                        <h4>Carolyn Craig</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user1.png" alt="">
-                    </div>
-                    <div class="desc">
-                        <p>
-                            Do you want to be even more successful? Learn to love learning and growth. The more effort
-                            you put into improving your skills, the bigger the payoff you.
-                        </p>
-                        <h4>Harriet Maxwell</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user2.png" alt="">
-                    </div>
-                    <div class="desc">
-                        <p>
-                            A purpose is the eternal condition for success. Every former smoker can tell you just how
-                            hard it is to stop smoking cigarettes. However.
-                        </p>
-                        <h4>Carolyn Craig</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user1.png" alt="">
-                    </div>
-                    <div class="desc">
-                        <p>
-                            Do you want to be even more successful? Learn to love learning and growth. The more effort
-                            you put into improving your skills, the bigger the payoff you.
-                        </p>
-                        <h4>Harriet Maxwell</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-testimonial item d-flex flex-row">
-                    <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user2.png" alt="">
-                    </div>
-                    <div class="desc">
-                        <p>
-                            A purpose is the eternal condition for success. Every former smoker can tell you just how
-                            hard it is to stop smoking cigarettes. However.
-                        </p>
-                        <h4>Carolyn Craig</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End testimonial Area -->
 
 <!-- Start home-about Area -->
 <!-- <section class="home-about-area">
