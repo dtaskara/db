@@ -64,7 +64,7 @@
 				          <li><a href="index.html">Home</a></li>
 				          
 				       	<!-- <li><a href="about.html">About</a></li> -->
-				          <li><a href="packages.html">Packages</a></li>
+				          <li><a href="packages.php">Packages</a></li>
 				          <li><a href="hotels.php">Hotels</a></li>
 				          <!-- <li><a href="insurance.html">Insurence</a></li> -->
 				          <!-- <li class="menu-has-children"><a href="">Blog</a>

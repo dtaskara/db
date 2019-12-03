@@ -62,7 +62,7 @@
 				          <li><a href="index.php">Home</a></li>
 				          
 				       	<!-- <li><a href="about.html">About</a></li> -->
-				          <li><a href="packages.html">Packages</a></li>
+				          <li><a href="packages.php">Packages</a></li>
 				          <li><a href="hotels.php">Hotels</a></li>
 				          <!-- <li><a href="insurance.html">Insurence</a></li> -->
 				          <!-- <li class="menu-has-children"><a href="">Blog</a>
@@ -98,7 +98,7 @@
 							<h1 class="text-white">
 								Tour Packages				
 							</h1>	
-							<p class="text-white link-nav"><a href="index.php">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="packages.html"> Tour Packages</a></p>
+							<p class="text-white link-nav"><a href="index.php">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="packages.php"> Tour Packages</a></p>
 						</div>	
 					</div>
 				</div>
@@ -538,6 +538,112 @@
 		                </div>
 		            </div>						
 					<div class="row">
+
+
+
+
+<?php 
+
+include 'database/connection.php';
+	// $query=sqlsrv_query($conn,"SELECT * FROM PackageTour;");
+	$res=array();
+
+
+$query = sqlsrv_query($conn, "SELECT * FROM PackageTour inner join Hotels on PackageTour.H_id=Hotel.h_id inner join TravelAgency on  PackageTour.TA_id=TravelAgency.TA_id inner join Trip on  PackageTour.Trip_id=Trip.Trip_id;", $res, array( "Scrollable" => 'static' ));
+
+	if(sqlsrv_num_rows($query)>0){
+		while ( $row=sqlsrv_fetch_object( $query )) {		
+
+ ?>
+
+						<div class="col-lg-4">
+							<div class="single-destinations">
+								<div class="thumb">
+									<img src="<?php echo $row->photo ?>" alt="">
+								</div>
+								<div class="details">
+									<h4 class="d-flex justify-content-between">
+										<span><?php echo $row->h_name  ?></span>                 
+
+
+
+										<div class="star">
+
+
+
+<?php 
+	for ($i=0; $i < 5 ; $i++) { 
+		if($row->H_stars<=$i){
+	?>
+<span class="fa fa-star "></span>
+	<?php		
+		}
+
+else{
+ 
+	?>
+<span class="fa fa-star checked"></span>		
+
+	<?php
+}
+
+	}
+ ?>
+
+
+											<!-- <span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>	 -->			
+										</div>	
+									</h4>
+									<!-- <p>
+										View on map   |   49 Reviews
+									</p> -->
+									<ul class="package-list">
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Swimming pool</span>
+											<span><?php echo $row->pool? 'Yes' : 'No' ?></span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Gymnesium</span>
+											<span><?php echo $row->gym? 'Yes' : 'No' ?></span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Wi-fi</span>
+											<span><?php echo $row->wifi? 'Yes' : 'No' ?></span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Room Service</span>
+											<span><?php echo $row->roomService? 'Yes' : 'No' ?></span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Air Condition</span>
+											<span><?php echo $row->airCondition? 'Yes' : 'No' ?></span>
+										</li>
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Restaurant</span>
+											<span><?php echo $row->restaurant? 'Yes' : 'No' ?></span>
+										</li>												
+										<li class="d-flex justify-content-between align-items-center">
+											<span>Price per night</span>
+											<a href="#" class="price-btn">$<?php echo $row->h_price ?></a>
+										</li>													
+									</ul>
+								</div>
+							</div>
+						</div>
+
+
+
+<?php 
+
+
+}
+	}
+ ?>
+
 						<div class="col-lg-4">
 							<div class="single-destinations">
 								<div class="thumb">
